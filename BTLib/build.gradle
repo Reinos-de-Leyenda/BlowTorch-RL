@@ -10,14 +10,18 @@ android {
 	}
 
 	defaultConfig {
-		minSdkVersion 14
+		minSdkVersion 21
 		targetSdkVersion 34
 		versionCode 219
 		versionName "2.0"
 		externalNativeBuild {
-			ndkBuild {
-				cppFlags ''
+			cmake {
+				arguments "-DANDROID_ALLOW_UNDEFINED_SYMBOLS=ON"
 			}
+		}
+
+		ndk {
+			abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
 		}
 	}
 
@@ -32,10 +36,11 @@ android {
 			jniLibs.srcDirs = ['libs']
 		}
 	}
-	ndkVersion '25.2.9519653'
+	ndkVersion '27.0.12077973'
 	externalNativeBuild {
-		ndkBuild {
-			path file('jni/Android.mk')
+		cmake {
+			path file('CMakeLists.txt')
+			version '3.22.1'
 		}
 	}
 }

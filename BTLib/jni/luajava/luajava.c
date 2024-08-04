@@ -264,7 +264,7 @@ static jmethodID luajava_new_array_method = NULL;
 
 
 /***************************************************************************
-/*
+*
 * $FC pushJavaObject
 * 
 * $ED Description
