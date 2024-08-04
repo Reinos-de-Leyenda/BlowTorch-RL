@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 27
-	buildToolsVersion '27.0.3'
+	namespace = "com.happygoatstudios.bt"
+	compileSdkVersion 34
+	buildToolsVersion '34.0.0'
 	signingConfigs {
     		release {
         		storeFile file("../BTLib/key/bt_privatekey.keystore")
@@ -12,9 +13,13 @@ android {
     		}
 	}
 
+	buildFeatures {
+		aidl true
+	}
+
 	defaultConfig {
 		minSdkVersion 14
-		targetSdkVersion 27
+		targetSdkVersion 34
 		versionCode 223
 		versionName "2.1"
 	}
@@ -41,6 +46,7 @@ android {
 			assets.srcDirs = ['assets']
 		}
 	}
+	ndkVersion '25.2.9519653'
 
 
 }
@@ -55,6 +61,6 @@ android {
 	}
 dependencies {
 	copyButtonEx
-	compile project(":BTLib")
+    api project(":BTLib")
 }
 

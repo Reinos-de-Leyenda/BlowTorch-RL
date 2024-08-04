@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.offsetnull.bt"
       android:versionCode="11"
       android:versionName="1.0.7">
     <application android:label="BlowTorch" android:theme="@android:style/Theme.NoTitleBar">
         <!-- android:windowSoftInputMode="adjustResize" -->
         <activity android:name="com.happygoatstudios.bt.window.MainWindow"
-        		  android:windowSoftInputMode="adjustPan|stateHidden"
+			android:exported="true"
+			android:windowSoftInputMode="adjustPan|stateHidden"
         		  android:label="BlowTorch"
         		 
         		  
@@ -18,7 +18,8 @@
         		  </intent-filter>
         </activity>
         <service android:name="com.offsetnull.bt.service.StellarService"
-        		 android:process=":remote">
+			android:exported="true"
+			android:process=":remote">
         		 <intent-filter>
         		 	<action android:name="com.happygoatstudios.bt.service.IStellarService"/>
         		 </intent-filter>
@@ -26,11 +27,12 @@
         		  
 
     </application>
-    <uses-sdk android:minSdkVersion="14" />
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest> 
