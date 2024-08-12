@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.offsetnull.bt"
       android:versionCode="11"
       android:versionName="1.0.7">
     <application android:label="BlowTorch" android:theme="@android:style/Theme.NoTitleBar">
         <!-- android:windowSoftInputMode="adjustResize" -->
-        <activity android:name="com.happygoatstudios.bt.window.MainWindow"
-        		  android:windowSoftInputMode="adjustPan|stateHidden"
+        <activity android:name="es.reinosdeleyenda.flamethrower.window.MainWindow"
+			android:exported="true"
+			android:windowSoftInputMode="adjustPan|stateHidden"
         		  android:label="BlowTorch"
         		 
         		  
 				  android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize"
         		  android:launchMode = "singleTask">
         		  <intent-filter>
-        		  	<action android:name="com.happygoatstudios.bt.window.MainWindow"/>
+        		  	<action android:name="es.reinosdeleyenda.flamethrower.window.MainWindow"/>
         		  	<category android:name="android.intent.category.DEFAULT"/>
         		  </intent-filter>
         </activity>
-        <service android:name="com.offsetnull.bt.service.StellarService"
-        		 android:process=":remote">
+        <service android:name="es.reinosdeleyenda.flamethrower_lib.es.reinosdeleyenda.flamethrower_lib.service.StellarService"
+			android:exported="true"
+			android:process=":remote"
+			android:foregroundServiceType="remoteMessaging">
         		 <intent-filter>
-        		 	<action android:name="com.happygoatstudios.bt.service.IStellarService"/>
+        		 	<action android:name="es.reinosdeleyenda.flamethrower.service.IStellarService"/>
         		 </intent-filter>
         </service>
         		  
 
     </application>
-    <uses-sdk android:minSdkVersion="14" />
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 </manifest> 

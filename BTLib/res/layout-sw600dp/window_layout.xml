@@ -19,7 +19,7 @@
        	android:layout_alignParentBottom="true"
     	
     	android:id="@+id/ctrl_target" /> -->
-	<com.offsetnull.bt.window.NoTouchActionBar
+	<es.reinosdeleyenda.flamethrower_lib.window.NoTouchActionBar
 		android:id="@+id/my_toolbar"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
@@ -58,7 +58,7 @@
     	android:textColor="#9999FF"
     	android:text="|DOWN|"/>
     
-    <com.offsetnull.bt.window.BetterEditText
+    <es.reinosdeleyenda.flamethrower_lib.window.BetterEditText
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:minHeight = "40dip"
@@ -113,7 +113,7 @@
     android:layout_above="@id/textinput" 
     /> -->
 
-     <!-- <com.happygoatstudios.bt.legacy.FixedViewFlipper 
+     <!-- <com.happygoatstudios.flamethrower_lib.legacy.FixedViewFlipper
     	android:id="@+id/flippdipper"
     	android:layout_height="fill_parent"
     	android:layout_width="fill_parent"
@@ -154,7 +154,7 @@
     			android:typeface="monospace"/> -->
     		
     	<!-- </ScrollView> -->	
-	 <!-- </com.happygoatstudios.bt.legacy.FixedViewFlipper> -->
+	 <!-- </com.happygoatstudios.flamethrower_lib.legacy.FixedViewFlipper> -->
 	
 
 </RelativeLayout>

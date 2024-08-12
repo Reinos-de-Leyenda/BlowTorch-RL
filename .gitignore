@@ -1,5 +1,7 @@
 gen/
 bin/
+BTLib/.cxx/
+BTLib/jni/luajit
 BTLib/gen
 BTLib/bin
 BTLib/obj
@@ -21,6 +23,10 @@ minilua
 local.properties
 .idea
 .gradle
+
+# The lua JIT is supposed to be downloaed
+LuaJIT
+LuaJIT-2.0.5
 
 ### Android ###
 # Built application files

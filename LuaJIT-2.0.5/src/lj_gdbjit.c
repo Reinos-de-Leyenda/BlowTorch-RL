@@ -47,7 +47,7 @@
 **
 ** Frame unwind information can be inspected with the GDB command
 ** "info frame". This also allows proper backtraces across JIT-compiled
-** code with the GDB command "bt".
+** code with the GDB command "flamethrower_lib".
 **
 ** You probably want to add the following settings to a .gdbinit file
 ** (or add them to ~/.gdbinit):
@@ -80,7 +80,7 @@ Temporary breakpoint 1, TRACE_1 () at x.lua:2
 1	for outer=1,100 do
 2	  for inner=1,100 do end
 3	end
-(gdb) bt
+(gdb) flamethrower_lib
 #0  TRACE_1 () at x.lua:2
 #1  0x08053690 in lua_pcall [...]
 [...]

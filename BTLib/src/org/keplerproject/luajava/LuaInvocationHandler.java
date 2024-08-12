@@ -29,9 +29,8 @@ import java.io.StringWriter;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import com.offsetnull.bt.service.Colorizer;
+import es.reinosdeleyenda.flamethrower_lib.service.Colorizer;
 
-import android.net.Proxy;
 import android.util.Log;
 
 /**

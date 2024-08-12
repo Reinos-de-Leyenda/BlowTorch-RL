@@ -1,33 +1,53 @@
 apply plugin: 'com.android.library'
 
 android {
-	compileSdkVersion 27
-	buildToolsVersion '27.0.3'
+    namespace = "es.reinosdeleyenda.flamethrower_lib"
+    compileSdkVersion 34
+    buildToolsVersion '34.0.0'
 
-	defaultConfig {
-		minSdkVersion 14
-		targetSdkVersion 27
-		versionCode 219
-		versionName "2.0"
-	}
+    buildFeatures {
+        aidl true
+    }
 
-	sourceSets {
-		main {
-			manifest.srcFile 'AndroidManifest.xml'
-			java.srcDirs = ['src']
-			resources.srcDirs = ['src']
-			aidl.srcDirs = ['src']
-			res.srcDirs = ['res']
-			assets.srcDirs = ['assets']
-			jniLibs.srcDirs = ['libs']
-		}
-	}
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 219
+        versionName "2.0"
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_ALLOW_UNDEFINED_SYMBOLS=ON"
+            }
+        }
 
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    ndkVersion '27.0.12077973'
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+            version '3.22.1'
+        }
+    }
 }
 
 dependencies {
-	compile "com.android.support:support-core-utils:27.1.1"
-	compile "com.android.support:appcompat-v7:27.1.1"
-	compile "com.android.support:support-compat:27.1.1"
-	compile "com.android.support:design:27.1.1"
+    api "com.android.support:support-core-utils:27.1.1"
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api "com.android.support:support-compat:27.1.1"
+    api "com.android.support:design:27.1.1"
 }

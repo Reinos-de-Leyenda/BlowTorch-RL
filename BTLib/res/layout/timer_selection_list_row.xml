@@ -125,7 +125,7 @@
   	  </TableLayout>
   		
   		
-  	  <com.happygoatstudios.bt.timer.ProgressMeter
+  	  <es.reinosdeleyenda.flamethrower.timer.ProgressMeter
   		android:id="@+id/timer_progress"
   		android:layout_width="fill_parent"
   		android:layout_height="fill_parent"
