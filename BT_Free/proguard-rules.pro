@@ -6,6 +6,6 @@
 	*;
 }
 
--keep class com.offsetnull.bt.** {
+-keep class es.reinosdeleyenda.flamethrower_lib.** {
 	*;
 }

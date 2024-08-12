@@ -692,12 +692,12 @@ swatchClickListener = luajava.createProxy("android.view.View$OnClickListener",{
     elseif(selectedColorField == "flipLabel") then
       color = flipLabelColor
     end
-    colorpickerdialog = luajava.newInstance("com.offsetnull.bt.button.ColorPickerDialog",context,colorPickerDoneListener,color)
+    colorpickerdialog = luajava.newInstance("es.reinosdeleyenda.flamethrower_lib.button.ColorPickerDialog",context,colorPickerDoneListener,color)
     colorpickerdialog:show()
   end
 })
 
-colorPickerDoneListener = luajava.createProxy("com.offsetnull.bt.button.ColorPickerDialog$OnColorChangedListener",{
+colorPickerDoneListener = luajava.createProxy("es.reinosdeleyenda.flamethrower_lib.button.ColorPickerDialog$OnColorChangedListener",{
   colorChanged = function(color)
     if(selectedColorField == "flip") then
       flipColorPicker:setBackgroundColor(color)

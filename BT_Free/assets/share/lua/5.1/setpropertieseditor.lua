@@ -127,7 +127,7 @@ function showDialog(editorValues)
   finishHolder:addView(cancel)
   top:addView(finishHolder)
   
-  dialog = luajava.newInstance("com.offsetnull.bt.window.LuaDialog",context,top,false,nil)
+  dialog = luajava.newInstance("es.reinosdeleyenda.flamethrower_lib.window.LuaDialog",context,top,false,nil)
   
   dialog:show()
 end

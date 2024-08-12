@@ -10,13 +10,13 @@
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
-    <application tools:replace="android:theme" android:icon="@drawable/blowtorch_logo3" android:label="BlowTorch" android:allowBackup="true" android:process="com.offsetnull.bt" android:hardwareAccelerated="true" android:theme="@style/Theme.AppCompat.Dark.NoActionBar">
-    	<meta-data android:value="84" android:name="BLOWTORCH_LUA_LIBS_VERSION"/>     	<activity android:name="com.offsetnull.btfree.FreeLauncher"
+    <application tools:replace="android:theme" android:icon="@drawable/blowtorch_logo3" android:label="BlowTorch" android:allowBackup="true" android:process="es.reinosdeleyenda.flamethrower_lib" android:hardwareAccelerated="true" android:theme="@style/Theme.AppCompat.Dark.NoActionBar">
+    	<meta-data android:value="84" android:name="BLOWTORCH_LUA_LIBS_VERSION"/>     	<activity android:name="es.reinosdeleyenda.flamethrower.FreeLauncher"
 		android:exported="true"
-		android:label="BlowTorch">            <intent-filter>                <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />            </intent-filter>        </activity>        <activity android:name="com.offsetnull.bt.launcher.Launcher"                  android:label="BlowTorch"                  >
+		android:label="BlowTorch">            <intent-filter>                <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />            </intent-filter>        </activity>        <activity android:name="es.reinosdeleyenda.flamethrower_lib.launcher.Launcher"                  android:label="BlowTorch"                  >
         </activity>
         <!-- android:windowSoftInputMode="adjustResize" -->
-        <activity android:name="com.offsetnull.bt.window.MainWindow"
+        <activity android:name="es.reinosdeleyenda.flamethrower_lib.window.MainWindow"
 			android:exported="true"
 			android:windowSoftInputMode="adjustPan|stateHidden"
         		  android:label="BlowTorch"
@@ -24,16 +24,16 @@
         		  android:launchMode = "singleTask">
         		  <intent-filter>
         		  	
-        		  	<action android:name="com.offsetnull.bt.window.MainWindow.NORMAL_MODE"/>
+        		  	<action android:name="es.reinosdeleyenda.flamethrower_lib.window.MainWindow.NORMAL_MODE"/>
         		  	<category android:name="android.intent.category.DEFAULT"/>
         		  </intent-filter>
         </activity>
         
-        <service tools:replace="android:process" android:name="com.offsetnull.bt.service.StellarService"
+        <service tools:replace="android:process" android:name="es.reinosdeleyenda.flamethrower_lib.service.StellarService"
         		 android:process=":stellar" android:exported="true" android:foregroundServiceType="remoteMessaging">
         		 <intent-filter>
         		 	
-        		 	<action android:name="com.offsetnull.bt.service.IStellarService.MODE_NORMAL"/>
+        		 	<action android:name="es.reinosdeleyenda.flamethrower_lib.service.IStellarService.MODE_NORMAL"/>
         		 </intent-filter>
         </service>
         		  

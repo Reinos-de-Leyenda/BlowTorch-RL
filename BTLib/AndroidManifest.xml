@@ -4,7 +4,7 @@
       android:versionName="1.0.7">
     <application android:label="BlowTorch" android:theme="@android:style/Theme.NoTitleBar">
         <!-- android:windowSoftInputMode="adjustResize" -->
-        <activity android:name="com.happygoatstudios.bt.window.MainWindow"
+        <activity android:name="es.reinosdeleyenda.flamethrower.window.MainWindow"
 			android:exported="true"
 			android:windowSoftInputMode="adjustPan|stateHidden"
         		  android:label="BlowTorch"
@@ -13,16 +13,16 @@
 				  android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize"
         		  android:launchMode = "singleTask">
         		  <intent-filter>
-        		  	<action android:name="com.happygoatstudios.bt.window.MainWindow"/>
+        		  	<action android:name="es.reinosdeleyenda.flamethrower.window.MainWindow"/>
         		  	<category android:name="android.intent.category.DEFAULT"/>
         		  </intent-filter>
         </activity>
-        <service android:name="com.offsetnull.bt.service.StellarService"
+        <service android:name="es.reinosdeleyenda.flamethrower_lib.es.reinosdeleyenda.flamethrower_lib.service.StellarService"
 			android:exported="true"
 			android:process=":remote"
 			android:foregroundServiceType="remoteMessaging">
         		 <intent-filter>
-        		 	<action android:name="com.happygoatstudios.bt.service.IStellarService"/>
+        		 	<action android:name="es.reinosdeleyenda.flamethrower.service.IStellarService"/>
         		 </intent-filter>
         </service>
         		  
